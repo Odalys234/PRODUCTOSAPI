@@ -53,4 +53,21 @@ app.MapPut("/products/{id}", (int id, Product product) =>
     {
         return Results.NotFound(); // Devuelve una respuesta HTTP 404 Not Found si el producto no existe 
     }
+
+    // Configurar una ruta DELETE para eliminar un producto por su ID
+    app.MapDelete("/products/{id}", (int id) =>
+    {
+        // Busca un producto en la lista que tenga el ID especificado
+        var existingProduct = products.FirstOrDefault(p => p.Id == id);
+        if (existingProduct != null)
+        {
+            // Elimina el producto de la lista 
+            products.Remove(existingProduct);
+            return Results.Ok(); // Devuelve una respuesta HTTP 200 OK
+        }
+        else
+        {
+            return Results.NotFound(); // Devuelve una respuesta HTTP 404 Not Found si el producto no existe
+        }
+    });
 });
