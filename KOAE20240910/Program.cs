@@ -18,3 +18,11 @@ app.UseHttpsRedirection();
 
 // Crear una lista para almacenar objetos de tipo Producto (productos)
 var products = new List<Product>();
+
+// Configurar una ruta GET para obtener un producto específico por su ID
+app.MapGet("/products/{id}", (int id) =>
+{
+    // Busca un producto en la lista que tenga el ID especificado
+    var product = products.FirstOrDefault(p => p.Id == id);
+    return product ?? Results.NotFound(); // Devuelve el producto encontrado o 404 si no se encuentra
+});
