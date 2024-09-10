@@ -16,3 +16,5 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+// Crear una lista para almacenar objetos de tipo Producto (productos)
+var products = new List<Product>();
