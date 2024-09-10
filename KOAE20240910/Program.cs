@@ -53,7 +53,7 @@ app.MapPut("/products/{id}", (int id, Product product) =>
     {
         return Results.NotFound(); // Devuelve una respuesta HTTP 404 Not Found si el producto no existe 
     }
-
+    });
     // Configurar una ruta DELETE para eliminar un producto por su ID
     app.MapDelete("/products/{id}", (int id) =>
     {
@@ -70,4 +70,14 @@ app.MapPut("/products/{id}", (int id, Product product) =>
             return Results.NotFound(); // Devuelve una respuesta HTTP 404 Not Found si el producto no existe
         }
     });
-});
+
+// Ejecutar la aplicación
+app.Run();
+
+// Definición de la clase Product que representa la estructura de un producto 
+internal class Product
+{
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public decimal Price { get; set; }
+}
