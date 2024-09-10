@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\MINEDUCYT\\Desktop\\PRACTICASApi\\KOAE20240910\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{230C71D9-C718-469B-8447-8B6C1934E7EE}|KOAE20240910\\KOAE20240910.csproj|c:\\users\\mineducyt\\desktop\\practicasapi\\koae20240910\\koae20240910\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{230C71D9-C718-469B-8447-8B6C1934E7EE}|KOAE20240910\\KOAE20240910.csproj|solutionrelative:koae20240910\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +31,19 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\MINEDUCYT\\Desktop\\PRACTICASApi\\KOAE20240910\\KOAE20240910\\Program.cs",
+              "RelativeDocumentMoniker": "KOAE20240910\\Program.cs",
+              "ToolTip": "C:\\Users\\MINEDUCYT\\Desktop\\PRACTICASApi\\KOAE20240910\\KOAE20240910\\Program.cs",
+              "RelativeToolTip": "KOAE20240910\\Program.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAQwBIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-10T22:57:29.368Z",
+              "EditorCaption": ""
             }
           ]
         }
