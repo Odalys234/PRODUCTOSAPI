@@ -30,3 +30,9 @@ app.MapGet("/products/{id}", (int id) =>
     var product = products.FirstOrDefault(p => p.Id == id);
     return product; // Devuelve el producto encontrado(o null si no se encuentra)
 });
+// Configurar una ruta POST para agregar un nuevo producto a la lista 
+app.MapPost("/products", (Product product) =>
+{
+    products.Add(product); // Agrega el nuevo producto a la lista 
+    return Results.Ok(); // Devuelve una respuesta HTTP 200 OK
+});
