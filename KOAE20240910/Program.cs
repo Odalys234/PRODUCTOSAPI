@@ -36,3 +36,21 @@ app.MapPost("/products", (Product product) =>
     products.Add(product); // Agrega el nuevo producto a la lista 
     return Results.Ok(); // Devuelve una respuesta HTTP 200 OK
 });
+
+// Configurar una ruta PUT para actualizar un producto existente por ID
+app.MapPut("/products/{id}", (int id, Product product) =>
+{
+    // Busca un producto en la lista que tenga el ID especificado 
+    var existingProduct = products.FirstOrDefault(p => p.Id == id);
+    if (existingProduct != null)
+    {
+        // Actualiza los datos del producto existente con los datos proporcionados
+        existingProduct.Name = product.Name;
+        existingProduct.Price = product.Price;
+        return Results.Ok(); // Devuelve una respuesta HTTP 200 OK
+    }
+    else
+    {
+        return Results.NotFound(); // Devuelve una respuesta HTTP 404 Not Found si el producto no existe 
+    }
+});
